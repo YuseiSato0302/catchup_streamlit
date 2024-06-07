@@ -12,6 +12,9 @@
 - Python 3.7以上
 - Streamlit
 
+また今回GemeniAPIを利用します。まだAPIキーを取得していない方は以下のURLからキーを発行してください。
+https://ai.google.dev/gemini-api?gad_source=1&gclid=CjwKCAjw34qzBhBmEiwAOUQcF23MZ0YXeaoqD7xJIOib1zt6kgwx1-MIPspDGndnqkh3mR0oYrJa1RoCPtEQAvD_BwE&hl=ja
+
 ### インストール手順
 
 1. **リポジトリをクローンする:**
