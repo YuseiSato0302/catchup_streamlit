@@ -17,7 +17,7 @@
 1. **リポジトリをクローンする:**
 
     ```bash
-    git clone <リポジトリのURL>
+    git clone https://github.com/YuseiSato0302/catchup_streamlit.git
     ```
 
 2. 仮想環境を作成する:
