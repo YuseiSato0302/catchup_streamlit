@@ -23,7 +23,7 @@
 2. 仮想環境を作成する:
 
     ```cmd
-    python -m venv venv
+    python -m venv .venv
     ```
 
 3. 仮想環境をアクティベートする:
