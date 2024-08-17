@@ -14,17 +14,19 @@
 
 ### インストール手順
 
-1. **リポジトリをクローンする:**
+1. リポジトリをクローンする:
 
     ```bash
     git clone https://github.com/YuseiSato0302/catchup_streamlit.git
     ```
+    
 
 2. 仮想環境を作成する:
 
     ```cmd
     python -m venv .venv
     ```
+    
 
 3. 仮想環境をアクティベートする:
 
@@ -32,23 +34,32 @@
     # Windows command prompt
     .venv\Scripts\activate.bat
     
-    # Windows PowerShell
+    # Windows PowerShell(windowsユーザーはPowerShellの使用を推奨)
     .venv\Scripts\Activate.ps1
     
     # macOS and Linux
     source .venv/bin/activate
     ```
+    
 
 4. 必要な依存関係をインストールする:
 
     ```bash
     pip install -r requirements.txt
     ```
+    
+    
+5. `.env`ファイルを作成し、ファイル内に取得したGemini APIキーを書き込む:
 
-5. Streamlitアプリケーションを実行する:
+   ```bash
+   GOOGLE_API_KEY="ここに取得したAPIキーを入力"
+   ```
+   
+
+6. Streamlitアプリケーションを実行する:
 
     ```bash
-    streamlit run app.py
+    streamlit run example.py
     ```
 
-    `app.py`は、メインのStreamlitアプリケーションファイルの名前に置き換えてください。
+    `chatbot_○○.py`は、お使いのOSのファイルを選択して実行してください。
