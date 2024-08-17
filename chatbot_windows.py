@@ -20,7 +20,7 @@ st.set_page_config(
     page_icon="🌮"
 )
 
-st.title("Chat with Gemini Pro")
+st.title("Chat with Gemini Pro at Windows")
 
 # セッション状態の初期化
 if "chat_session" not in st.session_state:
