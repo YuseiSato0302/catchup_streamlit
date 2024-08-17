@@ -2,9 +2,13 @@ import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import os
+from dotenv import load_dotenv
 
-# 環境変数からAPIキーを取得
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+# 環境変数をenvファイルから読み込む
+load_dotenv()
+
+# 読み込んだ環境変数からAPIキーを取得
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 # APIキー設定
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -12,13 +16,13 @@ genai.configure(api_key=GOOGLE_API_KEY)
 # タイトルを設定する
 st.set_page_config(
     page_title="Chat with Gemini Pro",
-    page_icon="🌮"
+    page_icon="🔑"
 )
 
 st.title("Chat with Gemini Pro")
 
 # セッション状態の初期化
-if "chat_session" not in st.session_state :
+if "chat_session" not in st.session_state:
     model = genai.GenerativeModel('gemini-pro')
     st.session_state["chat_session"] = model.start_chat(history=[
         glm.Content(role="user", parts=[glm.Part(text="あなたは優秀なAIアシスタントです。できるだけ簡潔に回答してください。")]),
@@ -31,7 +35,7 @@ for message in st.session_state["chat_history"]:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# ユーザー入力送信後処理
+# ユーザー入力受信後処理
 if prompt := st.chat_input("ここに入力してください"):
 
     # ユーザの入力を表示する
@@ -41,12 +45,12 @@ if prompt := st.chat_input("ここに入力してください"):
     # ユーザの入力をチャット履歴に追加する
     st.session_state["chat_history"].append({"role": "user", "content": prompt})
 
-    # Genimi Proにメッセージ送信
+    # Gemini Proにメッセージ送信
     response = st.session_state["chat_session"].send_message(prompt)
 
-    # Genimi Proのレスポンス表示
+    # Gemini Proのレスポンス表示
     with st.chat_message("assistant"):
         st.markdown(response.text)
 
-    # Genimi Proのレスポンスをチャット履歴に追加する
+    # Gemini Proのレスポンスをチャット履歴に追加する
     st.session_state["chat_history"].append({"role": "assistant", "content": response.text})
