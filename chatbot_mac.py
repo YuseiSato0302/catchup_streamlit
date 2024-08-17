@@ -10,6 +10,11 @@ load_dotenv()
 # 読み込んだ環境変数からAPIキーを取得
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
+# APIキーが設定されていない場合のエラーチェック
+if not GOOGLE_API_KEY:
+    st.error("GOOGLE_API_KEYが設定されていません。環境変数を確認してください。")
+    st.stop()
+
 # APIキー設定
 genai.configure(api_key=GOOGLE_API_KEY)
 
