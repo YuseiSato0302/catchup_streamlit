@@ -61,5 +61,3 @@
     ```bash
     streamlit run example.py
     ```
-
-    `chatbot_○○.py`は、お使いのOSのファイルを選択して実行してください。
