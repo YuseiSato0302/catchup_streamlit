@@ -20,7 +20,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 # タイトルを設定する
 st.set_page_config(
-    page_title="Chat with Gemini Pro",
+    page_title="Chat with Gemini Pro at Mac",
     page_icon="🌮"
 )
 
