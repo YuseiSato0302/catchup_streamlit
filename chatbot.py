@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 # 環境変数をenvファイルから読み込む
 load_dotenv()
 
-# 環境変数からAPIキーを取得
+# 読み込んだ環境変数からAPIキーを取得
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 # APIキーが設定されていない場合のエラーチェック
