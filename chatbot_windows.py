@@ -2,9 +2,13 @@ import streamlit as st
 import google.generativeai as genai
 import google.ai.generativelanguage as glm
 import os
+from dotenv import load_dotenv
+
+# 環境変数をenvファイルから読み込む
+load_dotenv()
 
 # 環境変数からAPIキーを取得
-GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
 # APIキーが設定されていない場合のエラーチェック
 if not GOOGLE_API_KEY:
