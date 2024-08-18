@@ -49,7 +49,7 @@
     ```
     
     
-5. `.env`ファイル内の"YOUR_API_KEY_HERE"を取得したGemini APIキーで上書きする:
+5. `.env.sample`ファイルを`.env`ファイルに変更後、ファイル内の"YOUR_API_KEY_HERE"を取得したGemini APIキーで上書きする:
 
    ```bash
    GOOGLE_API_KEY="YOUR_API_KEY_HERE"
