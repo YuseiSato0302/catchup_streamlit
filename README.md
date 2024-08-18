@@ -61,3 +61,5 @@
     ```bash
     streamlit run example.py
     ```
+
+streamlitでアプリを起動したい場合は`streamlit run ○○.py`を実行すること。
