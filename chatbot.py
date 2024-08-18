@@ -20,11 +20,11 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 # タイトルを設定する
 st.set_page_config(
-    page_title="Chat with Gemini Pro at Windows",
+    page_title="Chat with Gemini Pro",
     page_icon="🌮"
 )
 
-st.title("Chat with Gemini Pro at Windows")
+st.title("Chat with Gemini Pro")
 
 # セッション状態の初期化
 if "chat_session" not in st.session_state:
